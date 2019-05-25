@@ -1,0 +1,15 @@
+[package]
+name = "RustSample"
+version = "0.1.0"
+authors = ["shunsuke sasaki <omu.omugin@gmail.com>"]
+edition = "2018"
+
+[target.'cfg(target_os="android")'.dependencies]
+jni = { version = "0.5", default-features = false }
+
+[lib]
+name = "rust_logic"
+crate-type = ["staticlib", "cdylib"]
+
+[dependencies]
+
